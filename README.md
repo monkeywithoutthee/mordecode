@@ -1,4 +1,4 @@
-# mordecode
+# morsecode
 
 # one page app using javascript, html and CSS. Uses onsen ui
 # demonstrates the power of JS and the dom. WIll work in any environment that can handle JS,HTML and CSS.
