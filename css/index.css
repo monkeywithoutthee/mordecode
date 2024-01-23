@@ -1,0 +1,73 @@
+.morseHolder {
+  box-sizing: border-box;
+  width: 100%;
+  display: inline-block;
+}
+.morseOutputHolder {
+  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-right: 2px;
+  text-transform: initial;
+  text-align: left;
+  display: block;
+  font-size: larger;
+  padding: 8px;
+  border-radius: 5px;
+  overflow: auto;
+  box-shadow: 1px 1px 4px 0px rgb(0, 0, 0) inset;
+  line-height: 28px;
+  text-align: left;
+  height: 100px;
+  border-style: ridge;
+  border-color: rgba(0,0,0,0.9);
+}
+.morseTextInput{
+  width:100%;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 2px;
+  font-family: -apple-system,'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-weight: var(--font-weight);
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  height: auto;
+  text-decoration: none;
+  padding: 4px 10px;
+  padding: var(--button-padding);
+  font-size: 17px;
+  font-size: var(--font-size);
+  line-height: 32px;
+  line-height: var(--button-line-height);
+  letter-spacing: 0;
+  color: #fff;
+  color: var(--button-text-color);
+  vertical-align: middle;
+  background-color: #0076ff;
+  background-color: var(--button-background-color);
+  border: 0 solid currentColor;
+  border-radius: 3px;
+  border-radius: var(--button-border-radius);
+  transition: none;
+  width:100%;
+}
+.quotesListChild{
+  border-style: dotted;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+  border-width: 1px;
+}
+.divmaintext{
+  padding:3px;
+}

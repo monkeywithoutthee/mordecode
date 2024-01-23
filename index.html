@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+    <link rel='stylesheet' type='text/css' href='css/index.css'>
+
+    <title>morse code demo</title>
+  </head>
+  <body>
+    <ons-page id='morse'>
+              <ons-card>
+                <div id='divmaintext' class='divmaintext'>simple demonstration of the use of JavaScript to handle data within a HTML environment!</div>
+                  <div id='divMorse' class='morseCardContent'>
+                  <div class="morseHolder">
+                    <div class="morseOutputHolder ">
+                      <div class="morseOutput copyMorse "></div>
+                    </div>
+                        <div class="inPut"><textarea class="morseTextInput  areahanded arearight" placeholder="type something in!!" value="\n"></textarea></div>
+                        <button class='clearInputText button'>clear</button>
+                        <div class="switchHolder "><button class="morseSwitchInput button">text to morse</button></div>
+                    </div>
+                  </div>
+                  <div class="quotesheader">some quotes</div>
+                  <div class="quotesContainingHolder"><div class="quotesContaining"></div></div>
+                  <div class="quotesLinkHolder"><button class="quotesLink button">get more quotes</button></div>
+              </ons-card>
+
+  </ons-page>
+  </body>
+  <script src='js/jquery-3-4-1.js'></script>
+    <script src='js/index.js'></script>
+</html>
