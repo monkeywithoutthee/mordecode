@@ -82,18 +82,22 @@
             morseSwitchInput.addEventListener('click',(event)=>{
               const elTar = event.target;
               var sText = document.querySelector('.morseTextInput').value;
-              if(oMC.toMorse){//was morse to text, so switch!
-                  oMC.toMorse=false;elTar.innerHTML=oMC.innerHTML[0];
-                  document.querySelector('.morseTextInput').value = document.querySelector('.morseOutput').innerText;
-                  document.querySelector('.morseTextInput').placeholder = '- -.-- .--. . / ... --- -- . - .... .. -. --. / .. -. -.-.-- -.-.--';
-                  addEvent();//fakes an input and runs the string conversion function!
-              }else{
-                  sText = document.querySelector('.morseOutput').innerText;
-                  oMC.toMorse=true;elTar.innerHTML=oMC.innerHTML[1];
-                  document.querySelector('.morseTextInput').value = sText;
-                  document.querySelector('.morseTextInput').placeholder = 'type something in!!';
-                  addEvent();//fakes an input and runs the string conversion function!
-              };
+              const inp = document.querySelector('.morseTextInput');
+              const outp = document.querySelector('.morseOutput');
+              const tomorse = (()=>{
+                oMC.toMorse=false;elTar.innerHTML=oMC.innerHTML[0];
+                inp.value = outp.innerText;
+                inp.placeholder = '- -.-- .--. . / ... --- -- . - .... .. -. --. / .. -. -.-.-- -.-.--';
+                addEvent();//fakes an input and runs the string conversion function!
+              });
+              const totext = (()=>{
+                sText = outp.innerText;
+                oMC.toMorse=true;elTar.innerHTML=oMC.innerHTML[1];
+                inp.value = sText;
+                inp.placeholder = 'type something in!!';
+                addEvent();//fakes an input and runs the string conversion function!
+              });
+              oMC.toMorse ? tomorse() : totext(); //for ternary lovers everywhere!
             },true);
             morseSwitchInput.setAttribute('listener',true);
       };//ends morseSwitchInput
@@ -322,15 +326,13 @@
    });
 
   const removeSC = ((data)=>{
-    //item.replaceAll('—','--').replaceAll('…','...') -
-    //this is used because mac os replaces them as they look nicer on the screen.
-    //Need placing back! ANy other that turn up can be added here!
-    //console.log('removeSC::',data)
-    var returndata = data;//android and desktop
-  /*  if (!oPage.islocal&&device.platform.toLowerCase()==='ios'){
-      //returndata = data.replaceAll('—','--').replaceAll('…','...');//IOS
-      returndata = data.replace(/\—/g,'--').replace(/\…/g,'...');
-    };*/
+    var returndata = data.toLowerCase();
+    //nothing really needed in this application because if morse doesnt recognise it, nothing changes.
+    //you can add the remove like this, chain on the other replaces
+  /*  returndata = returndata.replaceAll('x','')
+                            .replaceAll('y','')
+                            .replaceAll('z','');
+    console.log(returndata,'<<removeSC::',data);*/
     return returndata;
   });
 
